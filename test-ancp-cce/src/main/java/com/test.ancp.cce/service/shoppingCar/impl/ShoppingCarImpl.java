@@ -4,7 +4,6 @@ import com.test.ancp.cce.dto.products.ProductsDto;
 import com.test.ancp.cce.dto.shoppingCar.ShoppingCarDto;
 import com.test.ancp.cce.dto.shoppingCar.ShoppingCarMapper;
 import com.test.ancp.cce.dto.shoppingCar.ShoppingCarRequest;
-import com.test.ancp.cce.dto.shoppingCarProducts.ShoppingCarProductMapper;
 import com.test.ancp.cce.dto.shoppingCarProducts.ShoppingCarProductRequest;
 import com.test.ancp.cce.model.Products;
 import com.test.ancp.cce.model.ShoppingCar;
