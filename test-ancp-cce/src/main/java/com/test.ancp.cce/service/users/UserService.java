@@ -1,5 +1,6 @@
 package com.test.ancp.cce.service.users;
 
+import com.test.ancp.cce.dto.users.LoginDto;
 import com.test.ancp.cce.dto.users.UserDto;
 import com.test.ancp.cce.dto.users.UserRequest;
 
@@ -12,4 +13,5 @@ public interface UserService {
     UserDto save(UserRequest request);
     UserDto update(UUID userUuid, UserRequest request);
     void delete( UUID userUuid);
+    String login(LoginDto login);
 }

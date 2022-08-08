@@ -1,5 +1,6 @@
 package com.test.ancp.cce.service.users.impl;
 
+import com.test.ancp.cce.dto.users.LoginDto;
 import com.test.ancp.cce.dto.users.UserDto;
 import com.test.ancp.cce.dto.users.UserMapper;
 import com.test.ancp.cce.dto.users.UserRequest;
@@ -78,6 +79,17 @@ public class UserServiceImpl implements UserService {
             userRepository.deleteById(productUuid);
         }else{
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Usuario no Encontrado");
+        }
+    }
+
+    @Override
+    public String login(LoginDto login) {
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        Optional<User> user = userRepository.findByEmail(login.getEmail());
+        if(encoder.matches(login.getPassword(),user.get().getPassword())){
+            return "OK";
+        }else {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Email o password incorrectos.");
         }
     }
 }
