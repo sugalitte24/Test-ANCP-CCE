@@ -1,0 +1,403 @@
+{
+	"info": {
+		"_postman_id": "521e5d86-acf9-4bcf-8a52-77932708afff",
+		"name": "ANCP-CCE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15356608"
+	},
+	"item": [
+		{
+			"name": "Get Products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJhbmNwSldUIiwic3ViIjoiZGFuaWVsQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiUk9MRV9VU0VSIiwiaWF0IjoxNjU5OTQwMzQyLCJleHAiOjE2NjAwMjY3NDJ9.V4HrOAgsia5YELD9LMt1p1Fz5QcgOGuGqh55iPSe6O9yt9_ZloJdUqiSaoUwRbrLNPsmDN2-GBqhIfcY6O2ypA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Teclado\",\n    \"amount\": \"10\",\n    \"price\": 10000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Products",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Mouse\",\n    \"amount\": \"5\",\n    \"price\": 30000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/products/5d56f6af-d126-4ce8-a83f-cb3a07fbd109",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"products",
+						"5d56f6af-d126-4ce8-a83f-cb3a07fbd109"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/products/d5983162-5dfb-4180-a8ec-4a7f39c51a91",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"products",
+						"d5983162-5dfb-4180-a8ec-4a7f39c51a91"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJhbmNwSldUIiwic3ViIjoiZGFuaWVsQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiUk9MRV9VU0VSIiwiaWF0IjoxNjU5OTQwMzQyLCJleHAiOjE2NjAwMjY3NDJ9.V4HrOAgsia5YELD9LMt1p1Fz5QcgOGuGqh55iPSe6O9yt9_ZloJdUqiSaoUwRbrLNPsmDN2-GBqhIfcY6O2ypA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Prueba\",\n    \"lastName\": \"Prueba Apellido\",\n    \"email\": \"daniel1@gmail.com\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Users",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Daniel\",\n    \"lastName\": \"Apellido\",\n    \"email\": \"daniel@gmail.com\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/user/6389be7c-f9de-43da-ad28-3e07584efc77",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"user",
+						"6389be7c-f9de-43da-ad28-3e07584efc77"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Users",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/user/e125dc68-ef64-4d01-861d-43579d83ff37",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"user",
+						"e125dc68-ef64-4d01-861d-43579d83ff37"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Shopping Car",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"products\": [\n        {\n            \"productUuid\": \"5d56f6af-d126-4ce8-a83f-cb3a07fbd109\",\n            \"quantity\": 2\n        },\n        {\n            \"productUuid\": \"704cbf49-29b6-4c04-80cb-f66cf5720776\",\n            \"quantity\": 1\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/shopping-car",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"shopping-car"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Shopping Car By Uuid",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJhbmNwSldUIiwic3ViIjoiZGFuaWVsQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiUk9MRV9VU0VSIiwiaWF0IjoxNjU5OTQwMzQyLCJleHAiOjE2NjAwMjY3NDJ9.V4HrOAgsia5YELD9LMt1p1Fz5QcgOGuGqh55iPSe6O9yt9_ZloJdUqiSaoUwRbrLNPsmDN2-GBqhIfcY6O2ypA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/shopping-car/b2c13198-04ba-45c6-8f4a-b3dfa5dbf49e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"shopping-car",
+						"b2c13198-04ba-45c6-8f4a-b3dfa5dbf49e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Shopping Car ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/shopping-car",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"shopping-car"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product Shopping Car",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"products\": [\n        {\n            \"productUuid\": \"5d56f6af-d126-4ce8-a83f-cb3a07fbd109\",\n            \"quantity\": 2\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/shopping-car/update-product/b5ffcfbd-4a44-4ef2-9e13-87093b11e0ed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"shopping-car",
+						"update-product",
+						"b5ffcfbd-4a44-4ef2-9e13-87093b11e0ed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product Shopping Car",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"products\": [\n        {\n            \"productUuid\": \"5d56f6af-d126-4ce8-a83f-cb3a07fbd109\",\n            \"quantity\": 2\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/shopping-car/b2c13198-04ba-45c6-8f4a-b3dfa5dbf49e/product/704cbf49-29b6-4c04-80cb-f66cf5720776",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"shopping-car",
+						"b2c13198-04ba-45c6-8f4a-b3dfa5dbf49e",
+						"product",
+						"704cbf49-29b6-4c04-80cb-f66cf5720776"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"daniel@gmail.com\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

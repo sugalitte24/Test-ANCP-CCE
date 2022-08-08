@@ -26,7 +26,14 @@ Repositorio: https://github.com/sugalitte24/Test-ANCP-CCE
 > se pueden ajustar en el archivo llamado: application.properties
 >![img.png](img_2.png)
 > La creación de las tablas, se hará automáticamente una vez se tenga la
-> base de datos y se ejecute el proyecto.
+> base de datos y se ejecute el proyecto. 
+> 
+### POSTMAN:
+>Dentro del proyecto se encuentra un archivo llamado:
+> 
+> ``ANCP-CCE.postman_collection.json``
+> 
+> En el cual se encuentran todos las peticiones con su debido request.
 
 ### Registro de Usuario
 > Para hacer el registro de un usuario, consumimos la url:
@@ -258,7 +265,7 @@ Repositorio: https://github.com/sugalitte24/Test-ANCP-CCE
 > Dónde recibiremos un HttpStatus 200.
 > 
 
-###Generar el .jar
+### Generar el .war para despliegues
 > Para generar el war, debemos compilar el proyecto y ejecutar el plugin de maven:
 >  
 >mvn clean install -DskipTests
